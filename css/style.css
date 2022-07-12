@@ -286,11 +286,41 @@ body {
     margin-top: 0px;
     margin-bottom: 50px;
    }
+
+   
+   .divice {
+    width: 206px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.2;
+        text-align: center;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+   }
+    .divice-name {
+    position: absolute;
+   
+    margin-right: 0px;
+    width: 370px;
+    padding: 27px 82px;
+    background-color: tomato;
+     }
+
+     .work-item {
+        position: relative;
+     }
+
 /*section our team*/
 
 .list-team {
     display: flex;
 }
+
 
 .list-team .member-team {
     display: block;
