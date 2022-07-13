@@ -51,7 +51,8 @@
         <div class="overlay">
         <div class="conteiner-primary conteiner hero-conteiner">
            <h1 class="section-title">Эффективные решения для вашего бизнеса</h1>
-            <button class="button-order" type="button">Заказать услугу</button>
+            <button class="button-order" type="button" data-modal-open>Заказать услугу</button>
+            
        </div> 
       </div>
       </section>
@@ -68,7 +69,7 @@
               Идейные соображения, а также начало повседневной работы по
               формированию позиции
             </p>
-          </li>
+             </li>
           <li class="feature-item">
             <div class="antena-around"> <svg class="antena">
                 <use href="./images/symbol-defs.svg#icon-clock"> </use>
@@ -103,18 +104,22 @@
       <!--What we Do-->
       <section class="section-work">
         <div class="conteiner-primary">
-            <h2 class="work-title">Чем мы занимаемся</h2>
-               <ul class="list list-work">
-                  <li class="work-item">
-                      <img
-                          src="./images/img-1-whatwedo.jpg"
-                             lang="en"
-                              alt="Someone print keyboard"
-                                width="370"
-                                  height="294"/>
-                          <p class="divice">Десктопные приложения</p>
-                      </li>
+        <h2 class="work-title">Чем мы занимаемся</h2>
+        <ul class="list list-work">
           <li class="work-item">
+           <div class="thumb">
+            <img
+              src="./images/img-1-whatwedo.jpg"
+              lang="en"
+              alt="Someone print keyboard"
+              width="370"
+              height="294"
+            /> 
+            <p class="divice">Десктопные приложения</p>
+          </div>
+          </li>
+          <li class="work-item">
+            <div class="thumb">
             <img
               src="./images/img-3-whatwedo.jpg"
               lang="en"
@@ -122,15 +127,20 @@
               width="370"
               height="294"
             />
+            <p class="divice">Мобильные приложения</p>
+            </div>
           </li>
           <li class="work-item">
-            <img
+           <div class="thumb"> 
+            <img 
               src="./images/img-2-whatwedo.jpg"
               lang="en"
               alt="Someone work with tablet"
               width="370"
               height="294"
             />
+            <p class="divice">Дизайнерские решения</p>
+          </div>
           </li>
         </ul>
         </div>
@@ -147,7 +157,7 @@
                   src="./images/img-team-i.jpeg"
                   lang="en"
                   alt="Man Igor on the foto"
-                 width="270"/>
+                 width="270" class="foto-member"/>
                  <div class="about-member">
                   <h3 class="team-member">Игорь Демьяненко</h3>
                  <p class="list-profession">Product Designe</p>
@@ -293,9 +303,11 @@
 
     <!--Footer-->
     <footer class="footer">
-      <div class="conteiner-primary conteiner-footer">
-      <a href="./index.html" class="logo-botton"><span class="logo-title">Web</span>Studio</a>
-      <address class="footer-flex">
+      <div class="conteiner-primary">
+        <div class="footer-flex">
+        <div class="our-flex">
+        <a href="./index.html" class="logo-botton"><span class="logo-title">Web</span>Studio</a>
+      <address>
         <ul class="list footer-item">
           <li class="list-footer">
             <a
@@ -311,7 +323,9 @@
             <a href="tel:+380961111111" class="footer-link">+38 096 111 11 11</a>
           </li>
         </ul>
-           <div class="social conteiner-social">
+        </address>
+        </div>
+        <div class="social conteiner-social">
           <h4 class="footer-social">Присоединяйтесь</h4>
           <ul class="social-list">
             <li class="social-item"><a href="" class="social-link social-footer"><svg class="social-icon footer-icon">
@@ -327,9 +341,20 @@
                   <use href="./images/symbol-defs.svg#icon-linkedin"></use>
                 </svg></a></li>
           </ul>
-        </div>
-      </address>
+          </div>
+          </div>
       </div>
     </footer>
+    <!--Modal - window-->
+    <div class="backdrop" data-modal>
+      <div class="modal">
+        <button class="button"> 
+        <svg>
+            <use href="./images/symbol-defs-close.svg#icon-close" class="modal-close"></use>
+          </svg>
+        </button> 
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
