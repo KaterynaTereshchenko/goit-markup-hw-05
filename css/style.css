@@ -41,6 +41,7 @@ body {
     line-height: 1.2;
     letter-spacing: 0.03em;
     display: inline-block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .logo:hover,
@@ -67,6 +68,8 @@ body {
      letter-spacing: 0.03em;
      display: inline-block;
      margin-bottom: 20px;
+    
+     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo-botton:hover,
@@ -164,6 +167,8 @@ body {
     margin-right: 10px;
     
     fill: var(--sec-color);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)t;
     }
 
     .link:hover > .envelope  {
@@ -213,14 +218,12 @@ body {
     background-size: cover;
     }
 
-    
-  
+      
 /*section features*/
  .section-features {
     padding-top: 94px;
     padding-bottom: 94px;
  }
-
 
   .list-feature {
     display: flex;
@@ -296,8 +299,7 @@ body {
 
   .thumb {
     position: relative;
-    width: 370px;
-        
+    width: 370px;      
   }
 
   .divice {
@@ -318,8 +320,7 @@ body {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     text-align: center;
-    
-   
+      
     background-color: rgb(47,48,58,0.8);
   }
    
@@ -343,39 +344,37 @@ body {
     margin-right: 0px;
     }
 
- .work-title,
- .team-title,
-.clients-title  {
+    .work-title,
+    .team-title,
+    .clients-title  {
         font-weight: 700;
         font-size: 36px;
         line-height: 1.2;
         text-align: center;
-        letter-spacing: 0.03em;
-        
-}
+        letter-spacing: 0.03em;     
+    }
 
  .work-title {
     margin-top: 0px;
     margin-bottom: 50px;
    }
-/*section our team*/
-.conteiner-main {
+    /*section our team*/
+    .conteiner-main {
     margin-bottom: 0px;
-}
-.list-team {
+    }
+    .list-team {
     display: flex;
-}
+    }
 
-.list-team .member-team {
+    .list-team .member-team {
     display: block;
     margin-right: 30px;
     justify-content: center;
     width: 270px;
-}
-.list-team .member-team:last-child {
+    }
+    .list-team .member-team:last-child {
     margin-right: 0px;
-}
-
+    }
 
  .list .list-profession {
 
@@ -467,6 +466,7 @@ body {
     align-items: center;
     border-radius: 50%;
     
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .social-link:hover {
@@ -488,6 +488,8 @@ body {
     width: 20px;
     height: 20px;
     fill: #9ea0a5;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     
@@ -502,8 +504,7 @@ body {
     .footer-social {
         display: block;
         width: 144px;
-
-        }
+     }
 
         /*Regular clients*/
 
@@ -536,7 +537,7 @@ body {
     border: 1px solid #AFB1B8;
     border-radius: 4px;
     
-        
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);    
     }
     .our-clients .clients-item:last-child {
         margin-right: 0px;
@@ -547,6 +548,8 @@ body {
     justify-content: center;
     align-items: center;
     padding: 16px 32px;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .clients-item:hover {
@@ -564,6 +567,7 @@ body {
     height: 60px;
     fill: #AFB1B8;
     
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .clients-link:hover > .clients-icon {
@@ -691,7 +695,7 @@ body {
     margin-bottom: 0px;
     
     padding: 0px 0px 0px 0px;
-}
+    }
 
     .exampl-item {
     width: calc((100% - 60px) / 3);
@@ -701,8 +705,9 @@ body {
     border: 1px solid var(--white);  
     align-content: space-around;
     border: 1px solid rgba(201, 201, 208, 0.193)
-    
-}
+
+    tras
+    }
   
     .exampl-item:nth-child(3n) {
         margin-right: 0px;
@@ -766,9 +771,59 @@ body {
 
     .exampl-item:focus {
         border: 1px solid rgba(200, 193, 193, 0.138);
-            box-shadow: 0px 2px 2px 0px rgba(10, 7, 7, 0.12),
+        box-shadow: 0px 2px 2px 0px rgba(10, 7, 7, 0.12),
             0px 1px 2px 0px rgba(27, 27, 27, 0.12), 0px 3px 1px 0px rgba(41, 39, 39, 0.17);
     }
+
+    /*Decoration effects for the exampl*/
+    .thumb-exampl {
+    position: relative;
+    width: 370px;
+    overflow: hidden;
+    
+    }
+    .overlay-exampl {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(33, 150, 243, 90%);
+    opacity: 1;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    }
+
+    .exampl-item:hover .overlay-exampl {
+        transform: translateY(0);
+    }
+
+    .exampl-item:focus .overlay-exampl {
+            transform: translateY(0);
+        }
+    
+    .exampl-text {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: block;
+    width: 322px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 10px;
+    color: var(--color-button);
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    
+    }
+    
     
  /*footer*/
 
