@@ -528,16 +528,7 @@ body {
     }
 
     .clients-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 170px;
-    height: 92px;
     margin-right: 30px;
-    border: 1px solid #AFB1B8;
-    border-radius: 4px;
-    
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);    
     }
     .our-clients .clients-item:last-child {
         margin-right: 0px;
@@ -547,22 +538,23 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    
     width: 170px;
     height: 92px;
+    
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .clients-item:hover {
+    .clients-link:hover,
+    .clients-link:focus {
      border-color: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
 
-    .clients-item:focus {
-        border-color: var(--accent-color);
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        }
-
-    .clients-icon {
+   .clients-icon {
     width: 106px;
     height: 60px;
     fill: #AFB1B8;
@@ -678,11 +670,14 @@ body {
     list-style: none;
 }
     .card-exampl {
-    padding-top: 20px;
-    padding-bottom: 24px;
-    padding-right: 24px;
-    padding-left: 20px;
-    margin-right: 0px;
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px 24px;
+    
+    margin-right: auto;
+    margin-left: auto;
+    /*width: 322px;*/
      }
 
     .exampl {
@@ -693,18 +688,16 @@ body {
     margin-top: 0px;
     margin-bottom: 0px;
     
-    padding: 0px 0px 0px 0px;
+    padding: 0;
     }
 
     .exampl-item {
     width: calc((100% - 60px) / 3);
     margin-right: 30px;
     margin-bottom: 30px;
-    padding-bottom: 0px;
-    border: 1px solid var(--white);  
+    padding-bottom: 0px; 
     align-content: space-around;
-    border: 1px solid rgba(201, 201, 208, 0.193);
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        
     }
   
     .exampl-item:nth-child(3n) {
@@ -714,24 +707,38 @@ body {
         margin-bottom: 0px;
     }
 
-    .exampl-item:hover {
+    .exampl-item .exampl-link:hover {
     border: 1px solid rgba(200, 193, 193, 0.138);
     box-shadow: 0px 2px 2px 0px rgba(10, 7, 7, 0.12),
     0px 1px 2px 0px rgba(27, 27, 27, 0.12), 0px 3px 1px 0px rgba(41, 39, 39, 0.17);
     }
     
-    .exampl-item:focus {
+    .exampl-item .exampl-link:focus {
     border: 1px solid rgba(200, 193, 193, 0.138);
     box-shadow: 0px 2px 2px 0px rgba(10, 7, 7, 0.12),
     0px 1px 2px 0px rgba(27, 27, 27, 0.12), 0px 3px 1px 0px rgba(41, 39, 39, 0.17);
          }
+
+    .exampl-link {
+    display: inline-block;
+    padding: 0;
+            
+    color: var(--main-color);
     
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    text-decoration-line: none;
+    border: 1px solid rgba(201, 201, 208, 0.193);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    }
+
+        
     .exampl-content {
- 
-    margin-right: 0px;
-    margin-left: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    display: block;
+    margin: 0;
    
     color: var(--sec-color);
 
@@ -743,6 +750,7 @@ body {
 
     .exampl-title {
     display: block;
+
     margin-right: 0px;
     margin-left: 0px;
     margin-top: 0px;
@@ -760,19 +768,7 @@ body {
     display: block;
     width: 370px;
      }       
-    
-    .exampl-link {
-    display: block;
-    padding: 0;
-    text-decoration-line: none;
-    color: var(--main-color);
-
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
-  }
-      
+           
 
     /*Decoration effects for the exampl*/
     .thumb-exampl {
@@ -790,18 +786,16 @@ body {
     background-color: rgba(33, 150, 243, 90%);
     opacity: 1;
     transform: translateY(100%);
-    transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
     }
 
-    .exampl-item:hover .overlay-exampl {
+    .exampl-item .exampl-link:hover .overlay-exampl,
+    .exampl-item .exampl-link:focus .overlay-exampl {
         transform: translateY(0);
     }
 
-    .exampl-item:focus .overlay-exampl {
-            transform: translateY(0);
-        }
-    
+      
     .exampl-text {
     position:absolute;
     top: 50%;
