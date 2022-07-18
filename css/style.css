@@ -1067,8 +1067,10 @@ margin-left: auto;
 padding: 4px;
 height: 30px;
 width: 30px;
-fill: var(--white);
+fill: var(--main-color);
 stroke: rgba(0, 4, 4, 25%);
 }
 
-
+.modal-close:hover {
+    fill: var(--accent-color);
+}
