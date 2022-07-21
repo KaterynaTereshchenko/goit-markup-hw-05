@@ -29,6 +29,24 @@ body {
     list-style: none;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.no-scroll {
+overflow: hidden;
+}
+
 /*logo*/
 .logo {
     color: var(--main-color);
@@ -83,11 +101,8 @@ body {
      width: 1200px;
      margin-left: auto;
      margin-right: auto;
-     /*outline: 3px solid tomato;*/
      padding-right: 15px;
      padding-left: 15px;
-     padding-top: 0px;    
-     padding-bottom: 0px;
  }
  
 
@@ -101,6 +116,8 @@ body {
      font-size: 14px;
      line-height: 1.2;
      letter-spacing: 0.02em;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav .link:hover {
     color: var(--accent-color);
@@ -113,6 +130,7 @@ body {
  }
 
  /*After in studio*/
+
  .nav-item-studio::after {
      content: "";
      width: 48px;
@@ -153,7 +171,9 @@ body {
     font-size: 14px;
     line-height: 1.2;
     letter-spacing: 0.02em;
-   
+    padding-top: 32px;
+    padding-bottom: 32px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .item-contact .link:hover  {
     color: var(--accent-color);
@@ -206,8 +226,7 @@ body {
         }
 
     .overlay {
-    height: 600;
-    max-width: 1600;
+    max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
     padding-top: 200px;
@@ -358,6 +377,7 @@ body {
     margin-top: 0px;
     margin-bottom: 50px;
    }
+
     /*section our team*/
     .conteiner-main {
     margin-bottom: 0px;
@@ -441,15 +461,9 @@ body {
     .team-card {
     width: 270px;
  }
-
-    .social {
-        width: 206px;
-        margin-right: 0px;
-        margin-left: 0px;
-    }
+  
     .social-list {
     display: flex;
-    
     justify-content: center;
     align-items: center;
     list-style: none;
@@ -497,15 +511,10 @@ body {
     fill: var(--white);
     }
 
-    .social-link:focus>.social-icon {
+    .social-link:focus >.social-icon {
     fill: var(--white);
         }
-
-    .footer-social {
-        display: block;
-        width: 144px;
-     }
-
+    
         /*Regular clients*/
 
     .section-clients {
@@ -551,7 +560,6 @@ body {
     .clients-link:hover,
     .clients-link:focus {
      border-color: var(--accent-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
 
    .clients-icon {
@@ -578,20 +586,12 @@ body {
     border-bottom: 1px solid #ECECEC;
    }
 
- .conteiner-portfolio {
-     margin-bottom: 0px;
-     padding-left: 0px;
-     padding-right: 0px;
-     padding-top: 24px;
-     padding-bottom: 24px;
- }
 /*site-nav -portfolio*/
 
  .flex-conteiner {
     display: flex;
     align-items: center;
-    padding-left: 0px;
-    padding-right: 0px;
+    
  }
 
 .page-header {
@@ -643,9 +643,7 @@ body {
 
 .item-contact .contact-item {
     margin-right: 50px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
+    
 } 
 
 .item-contact .contact-item:last-child {
@@ -670,14 +668,9 @@ body {
     list-style: none;
 }
     .card-exampl {
-    display: flex;
-    flex-direction: column;
-
     padding: 20px 24px;
-    
-    margin-right: auto;
-    margin-left: auto;
-    /*width: 322px;*/
+    border: 1px solid #EEEEEE;
+    border-top: none;
      }
 
     .exampl {
@@ -708,51 +701,34 @@ body {
     }
 
     .exampl-item .exampl-link:hover {
-    border: 1px solid rgba(200, 193, 193, 0.138);
-    box-shadow: 0px 2px 2px 0px rgba(10, 7, 7, 0.12),
-    0px 1px 2px 0px rgba(27, 27, 27, 0.12), 0px 3px 1px 0px rgba(41, 39, 39, 0.17);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 12%),
+            0px 4px 4px rgba(0, 0, 0, 6%), 1px 4px 6px rgba(0, 0, 0, 4%);
     }
     
     .exampl-item .exampl-link:focus {
-    border: 1px solid rgba(200, 193, 193, 0.138);
-    box-shadow: 0px 2px 2px 0px rgba(10, 7, 7, 0.12),
-    0px 1px 2px 0px rgba(27, 27, 27, 0.12), 0px 3px 1px 0px rgba(41, 39, 39, 0.17);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 12%),
+            0px 4px 4px rgba(0, 0, 0, 6%), 1px 4px 6px rgba(0, 0, 0, 4%);
          }
 
     .exampl-link {
-    display: inline-block;
-    padding: 0;
-            
-    color: var(--main-color);
-    
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
-    text-decoration-line: none;
-    border: 1px solid rgba(201, 201, 208, 0.193);
+    display: block;
+    text-decoration: none;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     }
 
         
     .exampl-content {
-    display: block;
-    margin: 0;
+     margin: 0;
    
     color: var(--sec-color);
 
-    font-weight: 400;
     font-size: 16px;
     line-height: 1.9;
     letter-spacing: 0.03em;
     }
 
     .exampl-title {
-    display: block;
-
-    margin-right: 0px;
-    margin-left: 0px;
     margin-top: 0px;
     margin-bottom: 4px;
 
@@ -766,7 +742,6 @@ body {
  }
     .exampl-site {
     display: block;
-    width: 370px;
      }       
            
 
@@ -901,37 +876,23 @@ body {
     /*footer-social-link*/
         .footer-flex {
         display: flex;
-        width: 1200px;
         align-items: center;
-        margin: 0px;
         }
-
-        .our-flex {
-        display: flex;
-        flex-direction: column;
-        }
-        
+             
         .conteiner-social {
-        display: flex;
-        flex-direction: column;
-         margin-left: 70px;
+        margin-left: 70px;
         }
 
         .social-footer .footer-icon {
         fill: var(--white);
         }
         .social-footer {
-        background-color: var(--accent-color);
         background-color: rgba(0, 4, 4, 0.25);
         }
     .footer-social {
-        display: inline-block;
-        margin-right: 0px;
-        margin-right: 0px;
         margin-top: 0px;
         margin-bottom: 20px;
 
-        font-style: normal;
         font-weight: 700;
         font-size: 14px;
         line-height: 1.1;
@@ -1054,6 +1015,7 @@ transform: translate(-50%, -50%) scale(1);
 
 min-width: 528px;
 min-height: 581px;
+border-radius: 4px;
 
 background-color: var(--white);
 
