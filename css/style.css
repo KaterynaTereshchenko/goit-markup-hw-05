@@ -188,7 +188,7 @@ overflow: hidden;
     
     fill: var(--sec-color);
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)t;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .link:hover > .envelope  {
@@ -582,7 +582,7 @@ overflow: hidden;
 
 /*portfolio site-link*/
 
- .header-portfolio {
+ .header {
     border-bottom: 1px solid #ECECEC;
    }
 
@@ -876,7 +876,7 @@ overflow: hidden;
     /*footer-social-link*/
         .footer-flex {
         display: flex;
-        align-items: center;
+        align-items: baseline;
         }
              
         .conteiner-social {
@@ -887,7 +887,7 @@ overflow: hidden;
         fill: var(--white);
         }
         .social-footer {
-        background-color: rgba(0, 4, 4, 0.25);
+        background-color:rgba(255, 255, 255, 0.1);
         }
     .footer-social {
         margin-top: 0px;
@@ -1023,16 +1023,27 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close {
-display: block;
-margin-right: 0px;
-margin-left: auto;
-padding: 4px;
+position: absolute;
+top: 8px;
+right: 8px;
 height: 30px;
 width: 30px;
-fill: var(--main-color);
-stroke: rgba(0, 4, 4, 25%);
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: transparent;
+border: 1px solid rgba(0, 0, 0, 0.1);
+border-radius: 50%;
+cursor: pointer;
+transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close:hover {
     fill: var(--accent-color);
+}
+
+.modal-icon {
+ width: 18px;
+ height: 18px;
+
 }
